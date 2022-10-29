@@ -1,0 +1,24 @@
+
+You walk through the hallway.
+
+It's a dead end.
+
+However, there is a chest at the end!
+
+You can use the ls -F command to distinguish between rooms (directories) and objects (files)
+
+Executables will have an asterisk (*) beside their filename.
+
+Type in ./script-name in order to execute a script!
+
+In this case, open the chest using the following command:
+
+./chest
+
+When you are done looting the chest, you should return to the previous room.
+
+You can do this using the following command:
+
+cd ..
+
+This command takes you to the previous room (directory).
