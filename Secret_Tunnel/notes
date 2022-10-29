@@ -1,0 +1,10 @@
+You enter a barren room.
+
+As far as you can see, there is only a staircase going up.
+However, there is a slight shimmer on the far left wall.
+
+If you would like to investigate this wall, use the following command to take a closer look:
+
+ls -a
+
+Otherwise, continue up the staircase using cd stairs.
