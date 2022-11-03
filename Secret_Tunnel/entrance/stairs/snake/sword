@@ -1,0 +1,20 @@
+#!/bin/bash
+#treasure chest code
+
+if ! grep -Po <<< Sword $I &> /dev/null; then
+        printf "\n"
+        echo "You find a sword with what looks to be a snake wrapped around the hilt."
+        printf "\n"
+        echo "As you pick up the sword, the snake hisses at you for a second before calming down."
+        printf "\n"
+        echo "Remember to store this sword in your inventory! Use the following command to do so:"
+        printf "\n"
+        echo "export Inv=Sword,\$Inv"
+        printf "\n"
+        echo "By using export, we create an environmental variable."
+        printf "\n"
+        echo "Check your inventory at any time by typing in echo \$Inv"
+        printf "\n"
+else
+        echo "There is nothing in the chest!"
+fi
