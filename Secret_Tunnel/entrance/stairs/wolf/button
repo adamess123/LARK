@@ -1,0 +1,21 @@
+echo "After acquiring the coat, you look around and spot what seems to be a paw embossed into the wall. You inspect its and realize that it seems to function as some form of switch."
+echo
+read -p "Will you press the switch? Y/N: " ANSWER
+
+case "$ANSWER" in
+    [Yy] )    
+        echo "The wall starts slowly moving upwards, revealing a pathway!"
+        mv ../.pathway ./pathway 2>/dev/null
+        echo
+        echo "Remember that you can traverse using cd."
+        echo
+        echo "There is a shortcut you can use to autocomplete this!"
+        echo
+        echo "By pressing TAB, you can autocomplete most commands and filenames, as long as they are valid."
+        echo
+        echo "Type in cd path and press TAB to autocomplete the directory name"
+        ;;
+    [Nn])
+        echo "You decide not to press the switch."
+        ;;
+esac
