@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#Ring Chest
+
+if ! grep -Po <<< Ring $I &> /dev/null; then
+        printf "\n"
+        echo "You find a shiny ring that easily fits your Ring Finger. "
+        printf "\n"
+        echo "As you try on this Ring, you feel a sensation of increced strength."
+        printf "\n"
+	echo "You realize that this ring might give you some extra strength."
+	printf "\n"
+        echo "Remember to equip the Ring! Use the following command to do so:"
+        printf "\n"
+        echo "export Inv=Ring,\$Inv"
+        printf "\n"
+        echo "By using export, we create an environmental variable."
+        printf "\n"
+        echo "Check your inventory at any time by typing in echo \$Inv"
+        printf "\n"
+else
+        echo "There is nothing in the chest!"
+fi

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "When getting the Ring, you encounter a slab on the ground that seems to be higher than the others."
+echo
+read -p "Will you step onto the plate? Y/N: " ANSWER
+
+case "$ANSWER" in
+    [Yy] )    
+        echo "The wall starts slowly moving upwards, revealing a pathway!"
+        mv ../.pathway ./pathway 2>/dev/null
+        echo
+        echo "Remember that you can traverse using cd."
+        echo
+        echo "There is a shortcut you can use to autocomplete this!"
+        echo
+        echo "By pressing TAB, you can autocomplete most commands and filenames, as long as they are valid."
+        echo
+        echo "Type in cd path and press TAB to autocomplete the directory name"
+        ;;
+    [Nn])
+        echo "You decide not to press the button."
+        ;;
+esac
