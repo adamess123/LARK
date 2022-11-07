@@ -1,0 +1,22 @@
+#!/bin/bash
+#treasure chest code
+
+if ! grep -Po <<< Coat $I &> /dev/null; then
+        printf "\n"
+        echo "You find a fur coat that looks to be of your size. "
+        printf "\n"
+        echo "As you try on this coat, you notice a pleasant warmth surround your entire body despite the otherwise freezing temperatures of this room."
+        printf "\n"
+	echo "You determine this coat may negate any environmental effects around you"
+	printf "\n"
+        echo "Remember to store this coat in your inventory! Use the following command to do so:"
+        printf "\n"
+        echo "export Inv=Coat,\$Inv"
+        printf "\n"
+        echo "By using export, we create an environmental variable."
+        printf "\n"
+        echo "Check your inventory at any time by typing in echo \$Inv"
+        printf "\n"
+else
+        echo "There is nothing in the chest!"
+fi
