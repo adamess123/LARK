@@ -8,6 +8,9 @@ case "$ANSWER" in
 	[Yy] )	
 		echo "The walls split and slowly slide apart, revealing a pathway!"
 		mv ../.pathway ./pathway 2>/dev/null
+		mv ../eagle ../.eagle 2>/dev/null
+        	mv ../dragon ../.dragon 2>/dev/null
+        	mv ../wolf ../.wolf 2>/dev/null
 		echo
 		echo "Remember that you can traverse using cd."
 		echo
@@ -19,5 +22,8 @@ case "$ANSWER" in
 		;;
 	[Nn])
 		echo "You decide not to press the button."
+		;;
+	*)
+		echo "You did not enter Yes or No."
 		;;
 esac

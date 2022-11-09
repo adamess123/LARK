@@ -18,6 +18,7 @@ if ! grep -Po <<< Ring $I &> /dev/null; then
         printf "\n"
         echo "Check your inventory at any time by typing in echo \$Inv"
         printf "\n"
+	mv ./.button ./button 2>/dev/null
 else
         echo "There is nothing in the chest!"
 fi

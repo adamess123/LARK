@@ -1,12 +1,17 @@
-echo "After acquiring the coat, you look around and spot what seems to be a paw embossed into the wall. You inspect it and realize that it seems to function as some form of switch."
+#!/bin/bash
+
+echo "When getting the Shield you see another skeleton but this time it is in a weird postion with one of its hand out as if it were a lever."
 echo
-read -p "Will you press the switch? Y/N: " ANSWER
+read -p "Will you pull hand and see what happens? Y/N: " ANSWER
 
 case "$ANSWER" in
     [Yy] )    
         echo "The wall starts slowly moving upwards, revealing a pathway!"
         mv ../.pathway ./pathway 2>/dev/null
-        echo
+        mv ../eagle ../.eagle 2>/dev/null
+	mv ../wolf ../.wolf 2>/dev/null
+	mv ../snake ../.snake 2>/dev/null
+	echo
         echo "Remember that you can traverse using cd."
         echo
         echo "There is a shortcut you can use to autocomplete this!"
@@ -16,6 +21,9 @@ case "$ANSWER" in
         echo "Type in cd path and press TAB to autocomplete the directory name"
         ;;
     [Nn])
-        echo "You decide not to press the switch."
+        echo "You decide not to press the button."
+        ;;
+       *)
+        echo "You did not enter Yes or No."
         ;;
 esac

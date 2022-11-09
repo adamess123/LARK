@@ -1,13 +1,16 @@
 #!/bin/bash
 
-echo "When getting the Shield you see another skeleton but this time it is in a weird postion with one of its hand out as if it were a lever."
+echo "When getting the Ring, you encounter a slab on the ground that seems to be higher than the others."
 echo
-read -p "Will you pull hand and see what happens? Y/N: " ANSWER
+read -p "Will you step onto the plate? Y/N: " ANSWER
 
 case "$ANSWER" in
     [Yy] )    
         echo "The wall starts slowly moving upwards, revealing a pathway!"
         mv ../.pathway ./pathway 2>/dev/null
+        mv ../dragon ../.dragon 2>/dev/null
+        mv ../wolf ../.wolf 2>/dev/null
+        mv ../snake ../.snake 2>/dev/null
         echo
         echo "Remember that you can traverse using cd."
         echo
@@ -19,5 +22,8 @@ case "$ANSWER" in
         ;;
     [Nn])
         echo "You decide not to press the button."
+        ;;
+       *)
+        echo "You did not enter Yes or No."
         ;;
 esac
