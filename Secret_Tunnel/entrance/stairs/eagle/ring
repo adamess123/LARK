@@ -4,11 +4,11 @@
 
 if ! grep -Po <<< Ring $I &> /dev/null; then
         printf "\n"
-        echo "You find a shiny ring that easily fits your Ring Finger. "
+        echo "You find a shiny ring that easily fits onto your ring finger. "
         printf "\n"
-        echo "As you try on this Ring, you feel a sensation of increced strength."
+        echo "As you try on this Ring, you feel a strange sensation surround your body."
         printf "\n"
-	echo "You realize that this ring might give you some extra strength."
+	echo "You inspect the ring and find a small eagle flapping its wings at its base. You then infer that this ring has given you an increase in your agility as you happen walk at speeds unaccustomed to you. "
 	printf "\n"
         echo "Remember to equip the Ring! Use the following command to do so:"
         printf "\n"
