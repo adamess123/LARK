@@ -1,27 +1,27 @@
 #!/bin/bash
-#Chest Code
+#shield Code
 
 if ! grep -Po <<< Shield $I &> /dev/null; then
 
-printf "\n"
-echo "In the distance you see a shield on a skeleton body."
+	printf "\n"
+	echo "In the distance you see a shield on a skeleton body."
 
-printf "\n"
-echo "You move closer to see what the object on the body was and you find out it is a shield made from dragon scales."
-printf "\n"
+	printf "\n"
+	echo "You move closer to see what the object on the body was and you find out it is a shield made from dragon scales."
+	printf "\n"
 
-echo "Remember to store the shield in your inventory! Use the following command to do so:"
-printf "\n"
+	echo "Remember to store the shield in your inventory! Use the following command to do so:"
+	printf "\n"
 
-echo "export Inv=Shield,\$Inv"
-printf "\n"
+	echo "export Inv=Shield,\$Inv"
+	printf "\n"
 
-echo "By using export, we create an environmental variable."
-printf "\n"
+	echo "By using export, we create an environmental variable."
+	printf "\n"
 
-echo "Check your inventory at any time by typing in echo \$Inv"
-printf "\n"
-
+	echo "Check your inventory at any time by typing in echo \$Inv"
+	printf "\n"
+	mv ./.button ./button 2>/dev/null
 else
         echo "There is nothing in the chest!"
 fi
