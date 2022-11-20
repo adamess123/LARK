@@ -1,0 +1,113 @@
+#!/bin/bash
+
+death (){
+	echo "You succumbed to your injuries and died. Game Over."
+	unset Inv
+	unset HP
+	$SHELL
+}
+
+fight (){
+	echo "Choose a number."
+	read ATK
+	rollOne=$RANDOM
+	rollTwo=$RANDOM
+	r1=`echo $rollOne | cut -b 1-2`
+	r2=`echo $rollTwo | cut -b 1-2`
+	let "ATK=$rollOne % $rollTwo"
+	mageATK=$RANDOM
+	mageATK=`echo $mageATK`
+	ATK=`echo $ATK | cut -b 1-2`
+	echo "The wizard does$mageATK damage"
+	echo "You do$ATK damage"
+	battle_script
+}	
+battle_script (){
+	if grep -Po Sword <<< $Inv
+	then
+		echo "The snake releases its poison along the sword, giving you an increase to your damage!"
+		let ATK=ATK+5
+	elif grep -Po Shield <<< $Inv
+	then	
+		echo "The shield begins to harden in the face of danger, bolstering your defense and lowering the mage's damage!"
+		let mageATK=mageATK-5
+		let HP=HP+2
+	elif grep -Po Cloak <<< $Inv
+	then
+		echo "The cloak covers you, protecting you from incoming magic. Your health is boosted!"
+		let HP=HP+5
+	elif grep -Po Ring <<< $Inv
+	then 
+		echo "The ring begins to shine, providing you resistance to magic!"
+		let mageATK=mageATK-8
+	fi
+
+	if [[ $mageATK -eq $ATK ]]
+	then
+		echo "You both hit at the same time, parrying each others attacks!"
+		fight
+	fi	
+	if [[ $mageATK -lt $ATK ]]
+	then
+		echo "You overpowered the mage's attacks and have defeated him!"
+		echo '
+		#!/bin/bash
+		#code should appear after boss battle with mage
+
+		if ! grep -Po orb <<< $Inv &> /dev/null
+		then
+			echo "You found a mysterious orb on the wizard. You decide to claim it as a reward for your battle."
+			echo "Make sure to add it to your inventory using export Inv=Orb."
+		else
+			echo "The orb has already been taken!"	
+		fi
+		'>orb | chmod u+x orb
+	else
+		echo "The mage dodged your attack and fires a barrage of fireballs at you!"
+	let HP=$(($HP-$mageATK))
+	export HP
+	echo "Your HP is now $HP"
+	if [ "$HP" -le 0 ]
+	then
+		echo "The mage's magic was too powerful for you!"
+		echo
+		death
+		sleep 4
+		exit 1
+	fi
+		echo
+		fight
+	fi		
+		
+}
+
+echo "As you put the scroll back down, you notice that there is a mage blocking the exit."
+echo
+echo "You cautiously approach him, wondering why he would be blocking the exit."
+echo
+echo "He says that he blocks the exit for all except those possessing the amulet of passage."
+echo
+echo "Do you want to show him your necklace to prove your worth?"
+read ANS
+
+if [ $ANS = "Y" -o $ANS = "y" -o $ANS = "Yes" -o $ANS = "yes" ]
+then
+	if grep -Po Amulet <<< $Inv
+	then
+		echo
+		echo "You show the mage your necklace, and he begins to inspect it."
+		echo
+		echo "To your surprise, the amulet is a fake!"
+		echo
+		echo "You desperately try to explain yourself to the mage, however he is already readying his spells against you."
+		fight
+	else
+		echo "You do not have an amulet!"
+		echo
+		echo "The wizard prepares to fight against you."
+		fight
+	fi
+else
+	echo "You decide to face the mage head on, with no negotiations."
+	fight
+fi

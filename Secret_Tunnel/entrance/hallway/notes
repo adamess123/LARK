@@ -5,7 +5,7 @@ It's a dead end.
 
 However, there is a chest at the end!
 
-You can use the ls -F command to distinguish between rooms (directories) and objects (files)
+Remember, you can use the ls -F command to distinguish between rooms (directories) and objects (files)
 
 Executables will have an asterisk (*) beside their filename.
 

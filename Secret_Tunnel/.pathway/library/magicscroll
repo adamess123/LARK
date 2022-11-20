@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export HP=100
+echo "You feel empowered, and feel that your health has been boosted!"
+echo
+echo "You now have HP to keep track of, which you can check anytime using echo \$HP."
+echo
+
+mv ./.mage ./mage 2>/dev/null
+
+source mage

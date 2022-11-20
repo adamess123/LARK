@@ -1,0 +1,86 @@
+#!/bin/bash
+
+if grep -Po Sword <<< $Inv &> /dev/null
+then
+        echo
+        echo "The text in the book is in a language incomprehensible to you."
+        echo
+        echo "However, in the pedestal the book is floating over, you notice a slot."
+        echo
+        echo "This slot looks familiar, and you realize that it is in the shape of your sword!"
+        echo
+        echo "Once you place the sword inside, the book slowly descends to the pedestal and into your hands."
+        echo
+        echo "In the book, there seems to be a chant regarding authority, as follows:"
+        echo
+        echo "If ye find that ye cannot utilize the item before thee, use chmod u+x to take control of all before ye."
+        echo
+        echo "You realize that you may be able to use this on the scroll beside the pedestal!"
+        echo
+        echo "Use chmod u+x magicscroll to enable you to open the scroll and receive it's benefits."
+        echo
+elif -Po Ring <<< $Inv &> /dev/null
+then
+        echo
+        echo "The text in the book is in a language incomprehensible to you."
+        echo
+        echo "However, in the pedestal the book is floating over, you notice a slot."
+        echo
+        echo "This slot looks familiar, and you realize that it is in the shape of your ring!"
+        echo
+        echo "Once you insert your ring, the book slowly descends to the pedestal and into your hands."
+        echo
+        echo "In the book, there seems to be a chant regarding authority, as follows:"
+        echo
+        echo "If ye find that ye cannot utilize the item before thee, use chmod u+x to take control of all before ye."
+        echo
+        echo "You realize that you may be able to use this on the scroll beside the pedestal!"
+        echo
+        echo "Use chmod u+x magicscroll to enable you to open the scroll and receive it's benefits."
+        echo
+elif -Po Coat <<< $Inv &> /dev/null
+then
+        echo
+        echo "The text in the book is in a language incomprehensible to you."
+        echo
+        echo "However, beside the pedestal the book is floating over, you notice a mannequin with a glow similar to the book."
+        echo
+        echo "The light glows in the shape of a coat akin to yours!"
+        echo
+        echo "You place your cloak over the mannequin, and the book slowly descends to the pedestal and into your hands."
+        echo
+        echo "In the book, there seems to be a chant regarding authority, as follows:"
+        echo
+        echo "If ye find that ye cannot utilize the item before thee, use chmod u+x to take control of all before ye."
+        echo
+        echo "You realize that you may be able to use this on the scroll beside the pedestal!"
+        echo
+        echo "Use chmod u+x magicscroll to enable you to open the scroll and receive it's benefits."
+        echo
+elif -Po Shield <<< $Inv &> /dev/null
+then
+        echo "The text in the book is in a language incomprehensible to you."
+        echo
+        echo "However, in the peestal the book is floating over, you notice a slot."
+        echo
+        echo "This slot looks familiar, and you realize that it is in the shape of your shield!"
+        echo
+        echo "Once you insert your shield, the book slowly descends to the pedestal and into your hands."
+        echo
+        echo "In the book, there seems to be a chant regarding authority, as follows:"
+        echo
+        echo "If ye find that ye cannot utilize the item before thee, use chmod u+x to take control of all before ye."
+        echo
+        echo "You realize that you may be able to use this on the scroll beside the pedestal!"
+        echo
+        echo "Use chmod u+x magicscroll to enable you to open the scroll and receive it's benefits."
+        echo
+else
+        echo
+        echo "You have not progressed enough to be able to touch the book. Please go back and progress some more before attempting to read the book!"
+        echo
+fi
+
+
+
+

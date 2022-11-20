@@ -1,0 +1,20 @@
+
+You have entered the book room and notice the tall shelfs of books that seem to go on forever. 
+
+In the back of the room, there is a bright white light.
+
+In the center of the room, there is a floating book, which you assume to have magical properties. 
+
+You make your way to the book to see what's inside it.
+
+From now on, we will be executing scripts a little differently.
+
+In cases like using the scroll, we want to ensure that the effects are assigned to you.
+
+When we use ./script to execute a script, we potentially lose any values that could be assigned to us.
+
+To execute scripts, use the following command:
+
+source script-name
+
+   

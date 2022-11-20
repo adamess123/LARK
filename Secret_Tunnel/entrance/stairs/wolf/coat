@@ -19,5 +19,5 @@ if ! grep -Po <<< Coat $I &> /dev/null; then
         printf "\n"
 	mv ./.button ./button 2>/dev/null
 else
-        echo "There is nothing in the chest!"
+        echo "You already have a coat!"
 fi

@@ -2,20 +2,20 @@
 #treasure chest code
 
 if ! grep -Po <<< Sword $I &> /dev/null; then
-        printf "\n"
+        \n
         echo "You find a sword with what looks to be a snake wrapped around the hilt."
-        printf "\n"
+        \n
         echo "As you pick up the sword, the snake hisses at you for a second before calming down."
-        printf "\n"
+        \n
         echo "Remember to store this sword in your inventory! Use the following command to do so:"
-        printf "\n"
+        \n
         echo "export Inv=Sword,\$Inv"
-        printf "\n"
+        \n
         echo "By using export, we create an environmental variable."
-        printf "\n"
+        \n
         echo "Check your inventory at any time by typing in echo \$Inv"
-        printf "\n"
-	mv ./.button ./button 2>/dev/null
+        \n 
+	#mv ./.button ./button 2>/dev/null
 else
-        echo "There is nothing in the chest!"
+        echo "You already have a sword!"
 fi
