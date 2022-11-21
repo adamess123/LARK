@@ -1,10 +1,17 @@
 #!/bin/bash
 
-death (){
+defeat (){
 	echo "You succumbed to your injuries and died. Game Over."
 	unset Inv
 	unset HP
-	$SHELL
+	echo "Would you like to restart the game?"
+	read ANS
+	if [ $ANS = "Y" -o $ANS = "y" -o $ANS = "Yes" -o $ANS = "yes" ]
+	then
+		cd ../Secret_Tunnel
+	else
+		exit 1
+	fi		 
 }
 
 fight (){
@@ -72,8 +79,6 @@ battle_script (){
 		echo "The mage's magic was too powerful for you!"
 		echo
 		death
-		sleep 4
-		exit 1
 	fi
 		echo
 		fight
