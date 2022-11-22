@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export HP=100
+export HP=75
 echo "You feel empowered, and feel that your health has been boosted!"
 echo
 echo "You now have HP to keep track of, which you can check anytime using echo \$HP."

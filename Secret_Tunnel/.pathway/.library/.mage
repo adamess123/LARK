@@ -62,6 +62,7 @@ battle_script (){
 			echo "The orb has already been taken!"	
 		fi
 		'>orb | chmod u+x orb
+		mv ./mage ./.mage 2>/dev/null
 	else
 		echo "The mage dodged your attack and fires a barrage of fireballs at you!"
 		let HP=$(($HP-$mageATK))
