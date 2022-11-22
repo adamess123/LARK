@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ -f "rubble" ]]
+then
+	#in here, lets try out the remove command!
+	#type it below using rm rubble
+	
+	mv ./.library ./library 2>/dev/null
+else
+	mv ./.library ./library 2>/dev/null
+fi

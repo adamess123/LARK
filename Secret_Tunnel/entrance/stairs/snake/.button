@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "As you pick up the sword, the snake's eyes begin to resonate with a button on the wall, both glowing red."
+echo "As you defeat the snake, the snake's eyes on your sword begin to resonate with a button on the wall, both glowing red."
 echo
 read -p "Will you go press the button? Y/N: " ANSWER
 
@@ -8,9 +8,6 @@ case "$ANSWER" in
 	[Yy] )	
 		echo "The walls split and slowly slide apart, revealing a pathway!"
 		mv ../.pathway ./pathway 2>/dev/null
-		mv ../eagle ../.eagle 2>/dev/null
-        	mv ../dragon ../.dragon 2>/dev/null
-        	mv ../wolf ../.wolf 2>/dev/null
 		echo
 		echo "Remember that you can traverse using cd."
 		echo

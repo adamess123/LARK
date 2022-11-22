@@ -3,15 +3,10 @@
 defeat (){
 	echo "You succumbed to your injuries and died. Game Over."
 	unset Inv
-	unset HP
-	echo "Would you like to restart the game?"
-	read ANS
-	if [ $ANS = "Y" -o $ANS = "y" -o $ANS = "Yes" -o $ANS = "yes" ]
+	if [[ $HP -ne 0 ]]
 	then
-		cd ../Secret_Tunnel
-	else
-		exit 1
-	fi		 
+		unset HP
+	fi
 }
 
 fight (){
@@ -19,14 +14,12 @@ fight (){
 	read ATK
 	rollOne=$RANDOM
 	rollTwo=$RANDOM
-	r1=`echo $rollOne | cut -b 1-2`
-	r2=`echo $rollTwo | cut -b 1-2`
 	let "ATK=$rollOne % $rollTwo"
 	mageATK=$RANDOM
-	mageATK=`echo $mageATK`
+	mageATK=`echo $mageATK | cut -b 1-2`
 	ATK=`echo $ATK | cut -b 1-2`
-	echo "The wizard does$mageATK damage"
-	echo "You do$ATK damage"
+	echo "The mage does $mageATK damage"
+	echo "You do $ATK damage"
 	battle_script
 }	
 battle_script (){
@@ -51,7 +44,7 @@ battle_script (){
 
 	if [[ $mageATK -eq $ATK ]]
 	then
-		echo "You both hit at the same time, parrying each others attacks!"
+		echo "You slice through the mage's fireball with your sword, causing you both to deal no damage!"
 		fight
 	fi	
 	if [[ $mageATK -lt $ATK ]]
@@ -63,7 +56,7 @@ battle_script (){
 
 		if ! grep -Po orb <<< $Inv &> /dev/null
 		then
-			echo "You found a mysterious orb on the wizard. You decide to claim it as a reward for your battle."
+			echo "You found a mysterious orb on the mage. You decide to claim it as a reward for your battle."
 			echo "Make sure to add it to your inventory using export Inv=Orb."
 		else
 			echo "The orb has already been taken!"	
@@ -71,18 +64,27 @@ battle_script (){
 		'>orb | chmod u+x orb
 	else
 		echo "The mage dodged your attack and fires a barrage of fireballs at you!"
-	let HP=$(($HP-$mageATK))
-	export HP
-	echo "Your HP is now $HP"
+		let HP=$(($HP-$mageATK))
+		export HP
+		echo "Your HP is now $HP"
+	fi
 	if [ "$HP" -le 0 ]
 	then
 		echo "The mage's magic was too powerful for you!"
 		echo
-		death
-	fi
+		defeat
+		echo "Would you like to restart the game?"
+        	read ANS
+       	 	if [ $ANS = "Y" -o $ANS = "y" -o $ANS = "Yes" -o $ANS = "yes" ]
+        	then
+                	cd ~/LARK/Secret_Tunnel
+        	else
+                	exit 1
+		fi        
+	else
 		echo
 		fight
-	fi		
+	fi	
 		
 }
 

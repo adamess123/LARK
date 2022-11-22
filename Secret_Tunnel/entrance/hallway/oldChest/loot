@@ -1,25 +1,24 @@
 #!/bin/bash
 #treasure chest code
 
-if ! grep -Po <<< ring $I &> /dev/null; then
+if ! grep -Po <<< Amulet $I &> /dev/null; then
         printf "\n"
-	echo "You search through the chest and find a silver ring with a beautiful ruby on top."
+	echo "You search through the chest and find a silver amulet with a beautiful ruby in it."
         printf "\n"
-        echo "In order to store this ring in your inventory, we will make an inventory variable."
+        echo "In order to store this amulet in your inventory, we will make an inventory variable."
         printf "\n"
         echo "Let's call this inventory Inv"
         printf "\n"
         echo "The following commands can be used to create the variable:"
         printf "\n"
-        echo "export Inv=ring,\$Inv"
+        echo "export Inv=Amulet,\$Inv"
         printf "\n"
         echo "By using export, we create an environmental variable."
         printf "\n"
         echo "An environmental variable ensures that you can access your inventory everywhere."
         printf "\n"
-        echo "Check your inventory at any time by typing in Echo \$Inv"
+        echo "Check your inventory at any time by typing in echo \$Inv"
         printf "\n"
-        mv ../.hallway ../hallway 2>/dev/null
 else
         echo "There is nothing in the chest!"
 fi

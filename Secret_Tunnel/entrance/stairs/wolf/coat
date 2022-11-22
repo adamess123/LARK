@@ -1,7 +1,8 @@
 #!/bin/bash
 #treasure chest code
 
-if ! grep -Po <<< Coat $I &> /dev/null; then
+if ! grep -Po <<< Coat $Inv &> /dev/null
+then
         printf "\n"
         echo "You find a fur coat that looks to be of your size. "
         printf "\n"
@@ -17,7 +18,7 @@ if ! grep -Po <<< Coat $I &> /dev/null; then
         printf "\n"
         echo "Check your inventory at any time by typing in echo \$Inv"
         printf "\n"
-	mv ./.button ./button 2>/dev/null
+	mv ./.ancientWolf ./ancientWolf 2>/dev/null
 else
         echo "You already have a coat!"
 fi

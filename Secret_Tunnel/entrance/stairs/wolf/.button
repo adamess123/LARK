@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "After acquiring the coat, you look around and spot what seems to be a paw embossed into the wall. You inspect it and realize that it seems to function as some form of switch."
+echo "After defeating the wolf, you look around and spot what seems to be a paw embossed into the wall. You inspect it and realize that it seems to function as some form of switch."
 echo
 read -p "Will you press the switch? Y/N: " ANSWER
 

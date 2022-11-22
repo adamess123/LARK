@@ -2,7 +2,7 @@
 
 #Ring Chest
 
-if ! grep -Po <<< Ring $I &> /dev/null; then
+if ! grep -Po <<< Ring $Inv &> /dev/null; then
         printf "\n"
         echo "You find a shiny ring that easily fits onto your ring finger. "
         printf "\n"

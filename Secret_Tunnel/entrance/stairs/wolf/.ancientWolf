@@ -1,0 +1,65 @@
+#!/bin/bash
+
+fight (){
+        echo "Choose a number."
+        read ATK
+        rollOne=$RANDOM
+        rollTwo=$RANDOM
+        let "ATK=$rollOne % $rollTwo"
+       	wolfATK=$RANDOM
+        wolfATK=`echo $wolfATK | cut -b 1-2`
+        ATK=`echo $ATK | cut -b 1-2`
+        echo "The wolf does $wolfATK damage"
+        echo "You do $ATK damage"
+        battle_script
+}
+battle_script (){
+        if grep -Po Cloak <<< $Inv
+        then
+                echo "The cloak covers you and imbues you with strength! Your attacks will probably do more damage."
+                let ATK=ATK+3
+        elif grep -Po Shield <<< $Inv
+        then
+                echo "You're not supposed to have this weapon, cheater! Your damage is now reduced by 10."
+                let ATK=ATK-10
+        elif grep -Po Sword <<< $Inv
+        then
+                echo "You're not supposed to have that sword, cheater! Your enemy now has more damage."
+                let HP=HP-20
+        elif grep -Po Ring <<< $Inv
+        then
+                echo "You're not supposed to have that ring, cheater! You are now slowed down, allowing the wolf to attack for more damage!"
+                let wolfATK=wolfATK+8
+        fi
+
+        if [[ $wolfATK -eq $ATK ]]
+        then
+                echo "The wolf lunges at you, and you weave his attack, negating each others attacks."
+                fight
+        fi
+        if [[ $wolfATK -lt $ATK ]]
+        then
+                echo "You punch the wolf, causing it to drop unconscious."
+                echo
+                echo "You can now move forward."
+                mv ../.button ../button 2>/dev/null
+                mv ../eagle ../.eagle 2>/dev/null
+                mv ../dragon ../.dragon 2>/dev/null
+                mv ../snake ../.snake 2>/dev/null
+		mv ./ancientWolf ./.ancientWolf 2>/dev/null
+        else
+                echo "The wolf ducks under your attack and!"
+                echo
+                echo "You are knocked unconscious"
+                echo
+                echo "You wake up back at the entrance!"
+                cd ../..
+                mv ../eagle ../.eagle 2>/dev/null
+                mv ../dragon ../.dragon 2>/dev/null
+                mv ../snake ../.snake 2>/dev/null
+        fi
+}
+
+echo "As you remove the cloak, a wolf appears from the shadows!"
+echo "He is enraged that you stole his cloak, and engages you in battle."
+fight

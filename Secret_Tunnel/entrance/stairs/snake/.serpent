@@ -1,0 +1,65 @@
+#!/bin/bash
+
+fight (){
+        echo "Choose a number."
+        read ATK
+        rollOne=$RANDOM
+        rollTwo=$RANDOM
+        let "ATK=$rollOne % $rollTwo"
+        serpentATK=$RANDOM
+        serpentATK=`echo $serpentATK | cut -b 1-2`
+        ATK=`echo $ATK | cut -b 1-2`
+        echo "The serpent does $serpentATK damage"
+        echo "You do $ATK damage"
+        battle_script
+}
+battle_script (){
+        if grep -Po Sword <<< $Inv
+        then
+                echo "The sword resonates with the serpent, seeming to weaken it! Your attacks will probably do more damage."
+                let ATK=ATK+3
+        elif grep -Po Shield <<< $Inv
+        then
+                echo "You're not supposed to have this weapon, cheater! Your damage is now reduced by 10."
+                let ATK=ATK-10
+        elif grep -Po Cloak <<< $Inv
+        then
+                echo "You're not supposed to have that coat, cheater! Your enemy now has more damage." 
+		let HP=HP-20
+        elif grep -Po Ring <<< $Inv
+        then
+                echo "You're not supposed to have that ring, cheater! You are now extra susceptable to poison."
+                let serpentATK=serpentATK+8
+        fi
+
+        if [[ $serpentATK -eq $ATK ]]
+        then
+                echo "Your sword clangs against the fangs of the serpent, negating each others attacks."
+                fight
+        fi
+        if [[ $serpentATK -lt $ATK ]]
+        then
+                echo "You slice through the Serpent, causing it to drop dead."
+        	echo 
+		echo "You can now move forward."
+		mv ../eagle ../.eagle 2>/dev/null
+                mv ../dragon ../.dragon 2>/dev/null
+                mv ../wolf ../.wolf 2>/dev/null
+		mv ./.button ./button 2>/dev/null
+	else
+                echo "The mage dodged your attack and fires a barrage of fireballs at you!"
+		echo
+		echo "You are knocked unconscious"
+		echo
+		echo "You wake up back at the entrance!"
+		cd ../..
+        	mv ../eagle ../.eagle 2>/dev/null
+		mv ../dragon ../.dragon 2>/dev/null
+		mv ../dragon ../.wolf 2>/dev/null
+	fi
+}
+
+echo "As you pick up the sword, the Serpent wakes up."
+echo
+echo "You are thrown into battle!"
+fight

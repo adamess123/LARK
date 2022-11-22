@@ -5,15 +5,20 @@ It's a dead end.
 
 However, there is a chest at the end!
 
-Remember, you can use the ls -F command to distinguish between rooms (directories) and objects (files)
+When you open it, you are met with thick webs, likely due to the chest sitting untouched for ages.
 
-Executables will have an asterisk (*) beside their filename.
+In order to search for any loot, we can use the grep command!
 
-Type in ./script-name in order to execute a script!
+The grep command specifies a pattern to search for.
 
-In this case, open the chest using the following command:
+In this case, lets grep for loot!
 
-./chest
+The command is:
+
+ls -F oldChest/ | grep loot
+
+
+
 
 When you are done looting the chest, you should return to the previous room.
 
