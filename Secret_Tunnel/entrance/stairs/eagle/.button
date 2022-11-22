@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "When getting the Ring, you encounter a slab on the ground that seems to be higher than the others."
+echo "After you defeat the eagle, you remember the eagle plague on the other side of the room."
 echo
-read -p "Will you step onto the plate? Y/N: " ANSWER
+read -p "Will you go over to it and attempt to press it? Y/N: " ANSWER
 
 case "$ANSWER" in
     [Yy] )    

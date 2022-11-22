@@ -1,18 +1,18 @@
 #!/bin/bash
-#treasure chest code
+#Cloak code
 
-if ! grep -Po <<< Coat $Inv &> /dev/null
+if ! grep -Po <<< Cloak $Inv &> /dev/null
 then
         printf "\n"
-        echo "You find a fur coat that looks to be of your size. "
+        echo "You find a fur cloak that looks to be of your size. "
         printf "\n"
-        echo "As you try on this coat, you notice a pleasant warmth surround your entire body despite the otherwise freezing temperatures of this room."
+        echo "As you try it on, you notice a pleasant warmth surround your entire body despite the otherwise freezing temperatures of this room."
         printf "\n"
-	echo "You determine this coat may negate any environmental effects around you"
+	echo "You determine this coat provides you resistance to any incoming damage!"
 	printf "\n"
         echo "Remember to store this coat in your inventory! Use the following command to do so:"
         printf "\n"
-        echo "export Inv=Coat,\$Inv"
+        echo "export Inv=Cloak"
         printf "\n"
         echo "By using export, we create an environmental variable."
         printf "\n"
@@ -20,5 +20,5 @@ then
         printf "\n"
 	mv ./.ancientWolf ./ancientWolf 2>/dev/null
 else
-        echo "You already have a coat!"
+        echo "You already have a cloak!"
 fi

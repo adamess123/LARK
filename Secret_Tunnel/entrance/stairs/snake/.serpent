@@ -25,7 +25,7 @@ battle_script (){
         elif grep -Po Cloak <<< $Inv
         then
                 echo "You're not supposed to have that coat, cheater! Your enemy now has more damage." 
-		let HP=HP-20
+		let serpentATK=serpentATK+5
         elif grep -Po Ring <<< $Inv
         then
                 echo "You're not supposed to have that ring, cheater! You are now extra susceptable to poison."
@@ -47,7 +47,7 @@ battle_script (){
                 mv ../wolf ../.wolf 2>/dev/null
 		mv ./.button ./button 2>/dev/null
 	else
-                echo "The mage dodged your attack and fires a barrage of fireballs at you!"
+                echo "The snake dodges your attack and slaps you with its tail!"
 		echo
 		echo "You are knocked unconscious"
 		echo
@@ -55,7 +55,7 @@ battle_script (){
 		cd ../..
         	mv ../eagle ../.eagle 2>/dev/null
 		mv ../dragon ../.dragon 2>/dev/null
-		mv ../dragon ../.wolf 2>/dev/null
+		mv ../wolf ../.wolf 2>/dev/null
 	fi
 }
 

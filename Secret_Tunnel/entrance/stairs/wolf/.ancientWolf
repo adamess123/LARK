@@ -25,7 +25,7 @@ battle_script (){
         elif grep -Po Sword <<< $Inv
         then
                 echo "You're not supposed to have that sword, cheater! Your enemy now has more damage."
-                let HP=HP-20
+                let wolfATK=wolfATK+5
         elif grep -Po Ring <<< $Inv
         then
                 echo "You're not supposed to have that ring, cheater! You are now slowed down, allowing the wolf to attack for more damage!"
@@ -48,7 +48,7 @@ battle_script (){
                 mv ../snake ../.snake 2>/dev/null
 		mv ./ancientWolf ./.ancientWolf 2>/dev/null
         else
-                echo "The wolf ducks under your attack and!"
+                echo "The wolf ducks under your attack and slashes at you!"
                 echo
                 echo "You are knocked unconscious"
                 echo
