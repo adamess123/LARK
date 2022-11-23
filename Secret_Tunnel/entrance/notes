@@ -2,11 +2,12 @@
 You enter a barren room.
 
 As far as you can see, there is only a staircase going up.
-However, you notice out of the corner of your eye a hallway to the left..
+
+However, you notice out of the corner of your eye a hallway to the left.
 
 In order to distinguish between items(files/scripts) and rooms(directories), use the following command:
 
 ls -F
 
-Otherwise, continue up the staircase using cd stairs/.
+Otherwise, continue up the staircase using cd stairs.
 
