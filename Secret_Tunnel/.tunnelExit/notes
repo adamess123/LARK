@@ -1,0 +1,15 @@
+
+You have reached the exit!
+
+However, the exit seems to be sealed off.
+
+You wonder if that orb in your pocket may be of any use.
+
+Try using the command: 
+
+echo open > Orb
+
+Using the arrow key redirects the output of your message into a file.
+
+Try it out!
+

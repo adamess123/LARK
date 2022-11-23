@@ -63,6 +63,7 @@ battle_script (){
 		fi
 		'>orb | chmod u+x orb
 		mv ./mage ./.mage 2>/dev/null
+		mv ../../.tunnelExit ./tunnelExit 2>dev/null
 	else
 		echo "The mage dodged your attack and fires a barrage of fireballs at you!"
 		let HP=$(($HP-$mageATK))
@@ -78,7 +79,7 @@ battle_script (){
         	read ANS
        	 	if [ $ANS = "Y" -o $ANS = "y" -o $ANS = "Yes" -o $ANS = "yes" ]
         	then
-                	cd ~/LARK/Secret_Tunnel
+                	cd $currHOME
         	else
                 	exit 1
 		fi        

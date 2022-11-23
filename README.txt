@@ -6,9 +6,9 @@ Welcome to LARK
 
 Name of game: Secret Tunnel
 
-Developed by: Deven Seerattan, Adam Essaydi, Zadrian Maldonado,and Tirth Shah
+Developed by: Deven Seerattan, Adam Essaydi, Zadrian Maldonado, and Tirth Shah
 
-Narrative: You wake up in front of a cave opening with no recollection of who and where you are.
+Narrative: You wake up in front of a cave opening with no recollection of who or where you are.
 You search your immediate vicinity, but find no other pathway besides the ominous entrance to the
 tunnel. You have no choice but to find a way through and survive.
 

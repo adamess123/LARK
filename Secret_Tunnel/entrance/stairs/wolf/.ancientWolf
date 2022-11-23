@@ -53,7 +53,7 @@ battle_script (){
                 echo "You are knocked unconscious"
                 echo
                 echo "You wake up back at the entrance!"
-                cd ../..
+                cd $currHOME
                 mv ../eagle ../.eagle 2>/dev/null
                 mv ../dragon ../.dragon 2>/dev/null
                 mv ../snake ../.snake 2>/dev/null
