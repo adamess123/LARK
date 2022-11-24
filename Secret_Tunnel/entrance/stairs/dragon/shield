@@ -21,7 +21,7 @@ if ! grep -Po <<< Shield $Inv &> /dev/null; then
 
 	echo "Check your inventory at any time by typing in echo \$Inv"
 	printf "\n"
-	mv ./.dragon ./youngDragon 2>/dev/null
+	mv ./.youngDragon ./youngDragon 2>/dev/null
 else
         echo "You already have a shield!"
 fi

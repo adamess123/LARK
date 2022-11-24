@@ -54,10 +54,11 @@ battle_script (){
                 echo "You are knocked unconscious."
                 echo
                 echo "You wake up back at the entrance!"
-                cd $currPATH
+		cd ../..
 		mv ../eagle ../.eagle 2>/dev/null
                 mv ../wolf ../.wolf 2>/dev/null
                 mv ../snake ../.snake 2>/dev/null
+		exit 0
         fi
 }
 
