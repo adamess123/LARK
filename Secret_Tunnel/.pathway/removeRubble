@@ -1,10 +1,13 @@
 #!/bin/bash
 
+#press i to enter INSERT mode and follow the instructions below!
 if [[ -f "rubble" ]]
 then
 	#in here, lets try out the remove command!
 	#type it below using rm rubble
 	
+	#once done, press ESC to exit insert mode
+	#afterwards, type in :wq! and press enter to save
 	mv ./.library ./library 2>/dev/null
 else
 	mv ./.library ./library 2>/dev/null

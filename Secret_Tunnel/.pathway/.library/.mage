@@ -1,5 +1,6 @@
 #!/bin/bash
 
+alias homeCD="$currHOME/.tunnelexit"
 defeat (){
 	echo "You succumbed to your injuries and died. Game Over."
 	unset Inv
@@ -26,16 +27,16 @@ battle_script (){
 	if grep -Po Sword <<< $Inv
 	then
 		echo "The snake releases its poison along the sword, giving you an increase to your damage!"
-		let ATK=ATK+5
+		let ATK=ATK+20
 	elif grep -Po Shield <<< $Inv
 	then	
 		echo "The shield begins to harden in the face of danger, bolstering your defense and lowering the mage's damage!"
-		let mageATK=mageATK-5
-		let HP=HP+2
+		let mageATK=mageATK-10
+		let HP=HP+10
 	elif grep -Po Cloak <<< $Inv
 	then
 		echo "The cloak covers you, protecting you from incoming magic. Your health is boosted!"
-		let HP=HP+5
+		let HP=HP+10
 	elif grep -Po Ring <<< $Inv
 	then 
 		echo "The ring begins to shine, providing you resistance to magic!"
@@ -63,7 +64,8 @@ battle_script (){
 		fi
 		'>orb | chmod u+x orb
 		mv ./mage ./.mage 2>/dev/null
-		mv $PWD/.tunnelExit ./tunnelExit 2>dev/null
+		mv $currPATH/Secret_Tunnel/.tunnelExit ./tunnelExit 2>/dev/null
+		return 1
 	else
 		echo "The mage dodged your attack and fires a barrage of fireballs at you!"
 		let HP=$(($HP-$mageATK))

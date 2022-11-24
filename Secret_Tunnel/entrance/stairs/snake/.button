@@ -7,7 +7,7 @@ read -p "Will you go press the button? Y/N: " ANSWER
 case "$ANSWER" in
 	[Yy] )	
 		echo "The walls split and slowly slide apart, revealing a pathway!"
-		mv ../.pathway ./pathway 2>/dev/null
+		mv ../../../.pathway ./pathway 2>/dev/null
 		echo
 		echo "Remember that you can traverse using cd."
 		echo

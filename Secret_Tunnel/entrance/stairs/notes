@@ -8,4 +8,15 @@ eagle
 
 You can choose any of these rooms.
 
+Unlike in the previous treasure chest, we will not be using ./ to execute scripts here.
+
+From now on, you will be using the source command to execute any scripts.
+
+Source is a command that keeps any changes done in the script and applies them to your character, such as if a script adds health or an item to the inventory.
+
+In whatever room you enter, use the following command format:
+
+source script-name
+
+Good luck!
 

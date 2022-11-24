@@ -7,7 +7,7 @@ You wonder if that orb in your pocket may be of any use.
 
 Try using the command: 
 
-echo open > Orb
+echo open > orb
 
 Using the arrow key redirects the output of your message into a file.
 

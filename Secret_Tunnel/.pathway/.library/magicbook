@@ -38,14 +38,14 @@ then
         echo
         echo "Use chmod u+x magicscroll to enable you to open the scroll and receive it's benefits."
         echo
-elif -Po Coat <<< $Inv &> /dev/null
+elif -Po Cloak <<< $Inv &> /dev/null
 then
         echo
         echo "The text in the book is in a language incomprehensible to you."
         echo
         echo "However, beside the pedestal the book is floating over, you notice a mannequin with a glow similar to the book."
         echo
-        echo "The light glows in the shape of a coat akin to yours!"
+        echo "The light glows in the shape of a cloak akin to yours!"
         echo
         echo "You place your cloak over the mannequin, and the book slowly descends to the pedestal and into your hands."
         echo

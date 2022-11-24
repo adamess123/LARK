@@ -7,7 +7,7 @@ read -p "Will you go forward? Y/N: " ANSWER
 case "$ANSWER" in
     [Yy] )    
         echo "The wall starts slowly moving upwards, revealing a pathway!"
-        mv ../.pathway ./pathway 2>/dev/null
+        mv ../../../.pathway ./pathway 2>/dev/null
         mv ../eagle ../.eagle 2>/dev/null
 	mv ../wolf ../.wolf 2>/dev/null
 	mv ../snake ../.snake 2>/dev/null

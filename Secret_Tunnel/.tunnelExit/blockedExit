@@ -7,7 +7,7 @@ beatGame (){
 	then
 		unset INV
 		unset HP
-		cd $currHOME
+		cd $currPATH
 	else
 		exit 1
 	fi
@@ -18,6 +18,7 @@ then
 	echo
 	echo "As you pass through the newly opened exit, you are met with a gentle breeze outside."
 	echo
+	beatGame
 else
 	echo "You do not have an orb!"
 fi	 

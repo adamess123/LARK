@@ -49,13 +49,13 @@ battle_script (){
                 mv ../snake ../.snake 2>/dev/null
                 mv ./ragingEagle ./.ragingEagle 2>/dev/null
         else
-                echo "The eagle ducks under your attack and slaps you with its tail!"
+                echo "The eagle ducks under your attack and pecks at you!"
                 echo
                 echo "You are knocked unconscious."
                 echo
                 echo "You wake up back at the entrance!"
-		cd ../..
-		mv ../eagle ../.eagle 2>/dev/null
+		cd $currPATH/Secret_Tunnel
+		mv ../dragon ../.dragon 2>/dev/null
                 mv ../wolf ../.wolf 2>/dev/null
                 mv ../snake ../.snake 2>/dev/null
 		exit 0

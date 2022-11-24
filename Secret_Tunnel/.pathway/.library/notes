@@ -7,14 +7,5 @@ In the center of the room, there is a floating book, which you assume to have ma
 
 You make your way to the book to see what's inside it.
 
-From now on, we will be executing scripts a little differently.
-
-In cases like using the scroll, we want to ensure that the effects are assigned to you.
-
-When we use ./script to execute a script, we potentially lose any values that could be assigned to us.
-
-To execute scripts, use the following command:
-
-source script-name
-
+Remember to use source to run any scripts!
    
