@@ -13,7 +13,7 @@ if ! grep -Po <<< Shield $Inv &> /dev/null; then
 	echo "Remember to store the shield in your inventory! Use the following command to do so:"
 	printf "\n"
 
-	echo "export Inv=Shield"
+	echo "export Inv=Shield,$Inv"
 	printf "\n"
 
 	echo "By using export, we create an environmental variable."

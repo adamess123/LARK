@@ -12,7 +12,7 @@ then
 	printf "\n"
         echo "Remember to store this coat in your inventory! Use the following command to do so:"
         printf "\n"
-        echo "export Inv=Cloak"
+        echo "export Inv=Cloak,\$Inv"
         printf "\n"
         echo "By using export, we create an environmental variable."
         printf "\n"

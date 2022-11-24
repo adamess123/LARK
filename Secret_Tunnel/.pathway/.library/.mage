@@ -57,13 +57,13 @@ battle_script (){
 		if ! grep -Po orb <<< $Inv &> /dev/null
 		then
 			echo "You found a mysterious orb on the mage. You decide to claim it as a reward for your battle."
-			echo "Make sure to add it to your inventory using export Inv=Orb."
+			echo "Make sure to add it to your inventory using export Inv=Orb,\$Inv."
 		else
 			echo "The orb has already been taken!"	
 		fi
 		'>orb | chmod u+x orb
 		mv ./mage ./.mage 2>/dev/null
-		mv ../../.tunnelExit ./tunnelExit 2>dev/null
+		mv $PWD/.tunnelExit ./tunnelExit 2>dev/null
 	else
 		echo "The mage dodged your attack and fires a barrage of fireballs at you!"
 		let HP=$(($HP-$mageATK))
@@ -79,7 +79,7 @@ battle_script (){
         	read ANS
        	 	if [ $ANS = "Y" -o $ANS = "y" -o $ANS = "Yes" -o $ANS = "yes" ]
         	then
-                	cd $currHOME
+                	cd $currPATH
         	else
                 	exit 1
 		fi        

@@ -43,7 +43,7 @@ battle_script (){
                 echo "You bash the eagle with your shield, causing it to drop unconscious."
                 echo
                 echo "You can now move forward."
-                mv ../.button ../button 2>/dev/null
+                mv ./.button ./button 2>/dev/null
                 mv ../dragon ../.dragon 2>/dev/null
                 mv ../wolf ../.wolf 2>/dev/null
                 mv ../snake ../.snake 2>/dev/null
@@ -54,7 +54,7 @@ battle_script (){
                 echo "You are knocked unconscious."
                 echo
                 echo "You wake up back at the entrance!"
-                cd $currHOME
+                cd $currPATH
 		mv ../eagle ../.eagle 2>/dev/null
                 mv ../wolf ../.wolf 2>/dev/null
                 mv ../snake ../.snake 2>/dev/null

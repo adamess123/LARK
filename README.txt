@@ -13,8 +13,9 @@ You search your immediate vicinity, but find no other pathway besides the ominou
 tunnel. You have no choice but to find a way through and survive.
 
 Instructions:
-1. Enter the Cave/Tunnel
-2. Navigate the Cave and find any items to help you survive
-3. Escape!
+1. Use command source start.sh to start the game. 
+2. Enter the Cave/Tunnel.
+3. Navigate the Cave and find any items to help you survive.
+4. Escape!
 
               
