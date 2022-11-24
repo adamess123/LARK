@@ -19,7 +19,7 @@ then
         echo
         echo "Use chmod u+x magicscroll to enable you to open the scroll and receive it's benefits."
         echo
-elif -Po Ring <<< $Inv &> /dev/null
+elif grep -Po Ring <<< $Inv &> /dev/null
 then
         echo
         echo "The text in the book is in a language incomprehensible to you."
@@ -38,7 +38,7 @@ then
         echo
         echo "Use chmod u+x magicscroll to enable you to open the scroll and receive it's benefits."
         echo
-elif -Po Cloak <<< $Inv &> /dev/null
+elif grep -Po Cloak <<< $Inv &> /dev/null
 then
         echo
         echo "The text in the book is in a language incomprehensible to you."
@@ -57,7 +57,7 @@ then
         echo
         echo "Use chmod u+x magicscroll to enable you to open the scroll and receive it's benefits."
         echo
-elif -Po Shield <<< $Inv &> /dev/null
+elif grep -Po Shield <<< $Inv &> /dev/null
 then
         echo "The text in the book is in a language incomprehensible to you."
         echo
