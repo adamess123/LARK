@@ -47,6 +47,7 @@ battle_script (){
                 mv ../dragon ../.dragon 2>/dev/null
                 mv ../snake ../.snake 2>/dev/null
 		mv ./ancientWolf ./.ancientWolf 2>/dev/null
+		return 0
         else
                 echo "The wolf ducks under your attack and slashes at you!"
                 echo
@@ -57,7 +58,7 @@ battle_script (){
 		mv ../eagle ../.eagle 2>/dev/null
                 mv ../dragon ../.dragon 2>/dev/null
                 mv ../snake ../.snake 2>/dev/null
-		exit 0
+		return 0
         fi
 }
 
