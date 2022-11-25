@@ -6,7 +6,7 @@ beatGame (){
 	read ANS
 	if [ $ANS = "Y" -o $ANS = "y" -o $ANS = "Yes" -o $ANS = "yes" ]
 	then
-		unset INV
+		unset Inv
 		unset HP
 		cd $currPATH
 		return 0
@@ -14,13 +14,19 @@ beatGame (){
 		exit 1
 	fi
 }
-if grep -Fxq "open" orb 2>/dev/null
+
+if [[ -f "orb" ]]
 then
-	echo "You speak the word "open" into the orb and use it to open the exit."
-	echo
-	echo "As you pass through the newly opened exit, you are met with a gentle breeze outside."
-	echo
-	beatGame
+	if grep -Fxq "open" orb 2>/dev/null
+	then
+		echo "You speak the word "open" into the orb and use it to open the exit."
+		echo
+		echo "As you pass through the newly opened exit, you are met with a gentle breeze outside."
+		echo
+		beatGame
+	else
+		echo "You have not spoken any words of power into the orb!"
+	fi
 else
 	echo "You do not have an orb!"
 fi	 
