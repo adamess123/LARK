@@ -3,16 +3,18 @@
 beatGame (){
 	echo "Congratulations! You have beat the game!"
 	echo "Would you like to play again?"
+	read ANS
 	if [ $ANS = "Y" -o $ANS = "y" -o $ANS = "Yes" -o $ANS = "yes" ]
 	then
 		unset INV
 		unset HP
 		cd $currPATH
+		return 0
 	else
 		exit 1
 	fi
 }
-if grep -Fxq "open" orb
+if grep -Fxq "open" orb 2>/dev/null
 then
 	echo "You speak the word "open" into the orb and use it to open the exit."
 	echo
