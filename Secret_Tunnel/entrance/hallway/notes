@@ -17,11 +17,11 @@ The command is:
 
 ls -F oldChest/ | grep loot
 
+cd into the chest to acquire this loot!
+
 Afterwards, we can run the script for loot to acquire the items.
 
 You can do this using ./loot
-
-cd into the chest to acquire this loot!
 
 When you are done looting the chest, you should return to the previous room.
 

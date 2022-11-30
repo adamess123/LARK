@@ -4,15 +4,11 @@ echo "You find yourself in front of the entrance to a tunnel."
 echo
 echo "You cannot see what is inside, as you are blinded by what seems to be a holy light."
 echo
-echo "In order to gain a sense of your surroundings, from now on we'll use the following command:"
+echo "You may read the contents of any notes using the cat notes command."
 echo
-echo "cat notes"
+echo "For now, we will simply traverse to the next room, using the cd command."
 echo
-echo "To display the notes of the room, starting in the next one."
-echo
-echo "Afterwards, use the cd command in order to traverse between rooms"
-echo
-echo "Try it out by typing out cd Secret_Tunnel"
+echo "Try it out by typing out cd Secret_Tunnel."
 echo
 echo "Enjoy your journey!"
 echo

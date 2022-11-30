@@ -1,6 +1,5 @@
 #!/bin/bash
 
-alias homeCD="$currHOME/.tunnelexit"
 defeat (){
 	echo "You succumbed to your injuries and died. Game Over."
 	unset Inv
@@ -51,6 +50,11 @@ battle_script (){
 	if [[ $mageATK -lt $ATK ]]
 	then
 		echo "You overpowered the mage's attacks and have defeated him!"
+		echo
+		echo "You noticed that he dropped something."
+		echo
+		echo "Pick it up, and afterwards search your surroundings again to"
+		echo "see if anything new has opened up!"
 		echo '
 		#!/bin/bash
 		#code should appear after boss battle with mage
@@ -83,7 +87,8 @@ battle_script (){
         	then
                 	cd $currPATH
         	else
-                	exit 1
+                	cd ~
+			unset currPATH
 		fi        
 	else
 		echo
