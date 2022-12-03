@@ -6,13 +6,14 @@ wolf
 snake
 eagle
 
-You can choose any of these rooms.
+You can choose any of these rooms, however you will only have access to that room once you choose it..
 
-Unlike in the previous treasure chest, we will not be using ./ to execute scripts here.
+If you have visited the hallway, we will be executing scripts a little differently here.
 
 From now on, you will be using the source command to execute any scripts.
 
-Source is a command that keeps any changes done in the script and applies them to your character, such as if a script adds health or an item to the inventory.
+Source is a command that keeps any changes done in the script and applies them to your character, 
+such as if a script adds health or an item to the inventory.
 
 In whatever room you enter, use the following command format:
 
